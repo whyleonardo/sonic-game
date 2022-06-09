@@ -8,3 +8,4 @@
 #### - CSS
 #### - Javascript
 
+![Sonic](https://user-images.githubusercontent.com/94463485/172861273-71b59c6f-27ee-4a3e-bdc7-b9e6202d9764.png)
