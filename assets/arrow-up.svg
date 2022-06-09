@@ -1,0 +1,9 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" height="1024" width="1024">
+<style type="text/css" id="current-color-scheme">
+        .ColorScheme-Text {
+            color: black;
+        }
+    </style><style class="darkreader darkreader--sync" media="screen"/>
+<path d="M8 4.293l-6 6 .707.707L8 5.707 13.293 11l.707-.707-6-6z" class="ColorScheme-Text" fill="currentColor" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"/>
+</svg>

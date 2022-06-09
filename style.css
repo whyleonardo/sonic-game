@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+/* ANIMATIONS ============================== */
+
+@keyframes pipe-animation {
+  from {
+    right: -80px;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes cloud-animation {
+  from {
+    right: -300px;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes sun-animation {
+  from {
+    right: -100px;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes sonic-jump {
+  0% {
+    bottom: 10;
+  }
+
+  30% {
+    bottom: 200px;
+  }
+
+  50% {
+    bottom: 250px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+}
+
+@keyframes death-animation {
+  0% {
+    bottom: 70px;
+  }
+  20% {
+    bottom: 100px;
+  }
+  40% {
+    bottom: 140px;
+  }
+  50% {
+    bottom: 150px;
+  }
+
+  100% {
+    bottom: -100px;
+  }
+}
+
+/* ======================================== */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  height: 100vh;
+}
+
+header h2 {
+  text-decoration: underline;
+}
+
+.tutorial {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 80%;
+  height: 10%;
+  margin-bottom: 5px;
+}
+
+.tutorial span p {
+  display: flex;
+  flex-direction: row;
+  gap: 0.3rem;
+}
+
+.tutorial img {
+  border: solid 1px #000;
+  border-radius: 4px;
+  width: 20px;
+  transition: all 0.5s;
+}
+
+.tutorial img:hover {
+  transform: scale(1.2);
+}
+
+.bg {
+  position: absolute;
+  z-index: -10;
+  background: linear-gradient(#87ceeb, #e0f6ff);
+  filter: blur(80px);
+
+  height: 100%;
+  width: 100vw;
+}
+
+.game-board {
+  background: linear-gradient(#87ceeb, #e0f6ff);
+  position: relative;
+  width: clamp(12.5rem, 90%, 93.75rem);
+  height: clamp(12.5rem, 31.25rem, 37.5rem);
+  border: 1px solid #000;
+  border-radius: 10px;
+  border-bottom: 10px #118e08d8 solid;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.lose-animation {
+  animation: shake 4s infinite ease-in-out;
+}
+
+.clouds {
+  width: 300px;
+  position: absolute;
+  z-index: 2;
+  top: 80px;
+  animation: cloud-animation infinite 20s linear;
+}
+
+.sun {
+  width: 200px;
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  right: 10px;
+  animation: sun-animation infinite 80s linear;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.sun:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2) drop-shadow(0 10px 1 px #d28f24);
+}
+
+.sonic {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 130px;
+}
+
+.jump {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 130px;
+  animation: sonic-jump 0.5s ease-out;
+}
+
+.pipe {
+  position: absolute;
+  bottom: 0;
+  width: 4rem;
+  animation: pipe-animation infinite 1.4s linear;
+}
+
+.score-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.actual-score {
+  color: yellow;
+}
+
+.last-score {
+  color: red;
+}
+
+.best-score {
+  color: blue;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 0.625rem;
+}
+
+.score:hover {
+  transform: scale(1.2);
+}
+
+.lose {
+  display: flex;
+  align-self: center;
+  position: relative;
+  top: 40%;
+}
